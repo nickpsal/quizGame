@@ -1,0 +1,14 @@
+function getQuestions(){
+    $.ajax({
+        url:'data.txt',
+        method: "GET",
+        dataType: "JSON",
+        success: function (data) {
+            console.log(data);
+            startGame(data);
+        },
+        error: function(response) {
+           alert("Δεν βρέθηκε το άρχειο των ερωτήσεων");
+        }
+    });
+}
