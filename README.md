@@ -1,7 +1,7 @@
 # quizGame
 This is a simply quiz game.
 When it opens It loads the questions from quiz.dat file and shuffles them. So the order of the questions is random.
-You can add as many questions as toy wwnt seperated by comma.
+You can add as many questions as you want seperated by comma.
 questions format : 
  {
         "question": "Questions",
@@ -24,5 +24,5 @@ questions format :
             }
         ]
     }
-if the naswer is correct the correct must be true the others false.
+if the answer is correct the correct must be true the others false.
 Only one question can be true.
