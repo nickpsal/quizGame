@@ -29,6 +29,7 @@ function getQuestions(){
     });
 }
 
+//εκκίνηση του παιχνιδιού
 function startGame(data){
     console.log(data);
     shuffledQuestions = data.sort(()=>Math.random() - 0.5);
@@ -39,6 +40,7 @@ function startGame(data){
     setQuenstion();
 }
 
+//Σετάρουμε την ερώτηση
 function setQuenstion() {
     nextbtn.classList.add("hide");
     resetState();
@@ -46,6 +48,8 @@ function setQuenstion() {
 
 }
 
+//Καθαρίζουμε τα κουμπιά των πιθανών απαντήσεων πρίν την εμφάνιση της 
+//καινούργιας ερώτησης
 function resetState() {
     nextbtn.classList.add("hode");
     while (answersbtn.firstChild) {
@@ -53,6 +57,7 @@ function resetState() {
     }
 }
 
+//Εμφανίζουμε την Ερώτηση και τις πιθανές απαντήσεις στην Οθόνη
 function ahowQuestion(question) {
     questionElement.innerText = question.question;
     question.answers.forEach(answer=> {
@@ -67,6 +72,7 @@ function ahowQuestion(question) {
     })
 }
 
+//Έλεγχος της επιλογής του Χρήστη
 function selectAnswer(e){
     let selectedAnswer = e.target;
     let correct = selectedAnswer.dataset.correct;
@@ -86,12 +92,16 @@ function selectAnswer(e){
     
 }
 
+//ΈλΕγχος απάντησης του Xρήστη
 function checkAnswer(correct) {
     if (correct) {
         score++;
     }
 }
 
+//Αλλάζουμε το background της σελίδας ανάλογα αν απάντησε σωστα ο χρήστης
+//Αλλάζουμε και τα φόντο των κουμπιών των πιθανών απαντήσεων
+//Κόκκινο των λανθασμένων και πράσινο για την σωστή Επιλογή
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
@@ -101,6 +111,7 @@ function setStatusClass(element, correct) {
     }
 }
 
+//Επαναφέρουμε το φόντο της σελίδας και το φόντο των κουμπιών των πιθανων απαντήσεων
 function clearStatusClass(element) {
     element.classList.remove("correct");
     element.classList.remove("wrong");
