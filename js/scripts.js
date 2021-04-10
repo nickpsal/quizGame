@@ -14,7 +14,7 @@ nextbtn.addEventListener("click", () => {
     setQuenstion();
 });
 
-//φορτώνουμε τις ερωτήσεις και τις απαντήσεις απο το αρείο data.txt
+//φορτώνουμε τις ερωτήσεις και τις απαντήσεις απο το αρείο quiz.dat
 function getQuestions(){
     $.ajax({
         url:'quiz.dat',
