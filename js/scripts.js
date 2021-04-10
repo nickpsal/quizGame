@@ -45,7 +45,6 @@ function setQuenstion() {
     nextbtn.classList.add("hide");
     resetState();
     ahowQuestion(shuffledQuestions[currentQuestionIndex]);
-
 }
 
 //Καθαρίζουμε τα κουμπιά των πιθανών απαντήσεων πρίν την εμφάνιση της 
@@ -91,7 +90,6 @@ function selectAnswer(e){
         score = 0;
         startbtn.classList.remove("hide");
     }
-    
 }
 
 //ΈλΕγχος απάντησης του Xρήστη
