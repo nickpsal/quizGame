@@ -87,6 +87,7 @@ function selectAnswer(e){
         scoreElement.classList.remove("hide");
         questionContainer.classList.add("hide");
         scoreElement.innerHTML = "Τέλος Παιχνιδιού!!!!\n Το σκόρ σου είναι " + score + " στα " + shuffledQuestions.length;
+        startbtn.innerText = "ΕΠΑΝΕΚΚΙΝΗΣΗ ΠΑΙΝΧΙΔΙΟΥ";
         startbtn.classList.remove("hide");
     }
     
